@@ -9,6 +9,7 @@ import (
 
 func handler(w http.ResponseWriter, r *http.Request) {
 	t := time.Now()
+	fmt.Fprintf("a little change")
 	fmt.Fprintf(w, "Hello, it is %d:%d", t.Hour(), getMinute(t.Minute(), t.Second()))
 }
 
